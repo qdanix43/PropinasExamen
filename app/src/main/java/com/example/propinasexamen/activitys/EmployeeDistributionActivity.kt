@@ -15,6 +15,8 @@ class EmployeeDistributionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_employee_distribution)
 
+        totalTips = intent.getDoubleExtra("total", 0.0)
+
         val employeeCountTextView = findViewById<TextView>(R.id.employeeCountTextView)
         val increaseButton = findViewById<Button>(R.id.increaseButton)
         val decreaseButton = findViewById<Button>(R.id.decreaseButton)
@@ -36,7 +38,7 @@ class EmployeeDistributionActivity : AppCompatActivity() {
 
         // Aquí puedes obtener el total de propinas de tu base de datos
         // Por ahora, lo estableceremos en un valor fijo para propósitos de ejemplo
-        totalTips = 555.0 // Ejemplo de propinas totales
+        //totalTips = 655.0 // Ejemplo de propinas totales
 
         calculateTipPerEmployee()
     }

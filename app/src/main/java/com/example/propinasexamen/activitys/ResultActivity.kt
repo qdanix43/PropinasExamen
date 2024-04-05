@@ -24,6 +24,7 @@ class ResultActivity : AppCompatActivity() {
         val nextActivityButton = findViewById<Button>(R.id.nextActivityButton)
         nextActivityButton.setOnClickListener {
             val intent = Intent(this, EmployeeDistributionActivity::class.java)
+            intent.putExtra("total", total)
             startActivity(intent)
         }
     }
